@@ -11,7 +11,7 @@ import SwiftUI
 struct TodoAppApp: App {
     
     init() {
-        Injector.initGraph([DataAssembly()])
+        Injector.initGraph([DataAssembly(), UIAssembly()])
     }
     
     var body: some Scene {

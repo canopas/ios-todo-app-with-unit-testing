@@ -21,6 +21,9 @@
 		9B33080228128B5500C66519 /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33080128128B5500C66519 /* DataAssembly.swift */; };
 		9B33080A28128D7600C66519 /* TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33080928128D7600C66519 /* TodoAppTests.swift */; };
 		9B33081128128DF400C66519 /* TaskListVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33081028128DF400C66519 /* TaskListVMTest.swift */; };
+		9B91AC4A281A97C000B81AAC /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91AC49281A97C000B81AAC /* AddTaskView.swift */; };
+		9B91AC4C281A996D00B81AAC /* UIAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91AC4B281A996D00B81AAC /* UIAssembly.swift */; };
+		9B91AC4E281AA41B00B81AAC /* AddTaskVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91AC4D281AA41B00B81AAC /* AddTaskVMTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		9B33080728128D7600C66519 /* TodoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B33080928128D7600C66519 /* TodoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppTests.swift; sourceTree = "<group>"; };
 		9B33081028128DF400C66519 /* TaskListVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListVMTest.swift; sourceTree = "<group>"; };
+		9B91AC49281A97C000B81AAC /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		9B91AC4B281A996D00B81AAC /* UIAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAssembly.swift; sourceTree = "<group>"; };
+		9B91AC4D281AA41B00B81AAC /* AddTaskVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVMTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,8 @@
 			children = (
 				9B3307D428113E5200C66519 /* ContentView.swift */,
 				9B3307FD28118E4400C66519 /* TaskListView.swift */,
+				9B91AC49281A97C000B81AAC /* AddTaskView.swift */,
+				9B91AC4B281A996D00B81AAC /* UIAssembly.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 		9B33080828128D7600C66519 /* TodoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				9B91AC4D281AA41B00B81AAC /* AddTaskVMTest.swift */,
 				9B33081028128DF400C66519 /* TaskListVMTest.swift */,
 				9B33080928128D7600C66519 /* TodoAppTests.swift */,
 			);
@@ -281,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B91AC4C281A996D00B81AAC /* UIAssembly.swift in Sources */,
 				9B33080228128B5500C66519 /* DataAssembly.swift in Sources */,
 				9B3307E528113E5400C66519 /* ContentView.swift in Sources */,
 				9B33080028128B3500C66519 /* Injector.swift in Sources */,
+				9B91AC4A281A97C000B81AAC /* AddTaskView.swift in Sources */,
 				9B3307F42811887500C66519 /* Task.swift in Sources */,
 				9B3307FE28118E4400C66519 /* TaskListView.swift in Sources */,
 				9B3307F6281188A900C66519 /* TaskRepository.swift in Sources */,
@@ -305,6 +316,7 @@
 			files = (
 				9B33080A28128D7600C66519 /* TodoAppTests.swift in Sources */,
 				9B33081128128DF400C66519 /* TaskListVMTest.swift in Sources */,
+				9B91AC4E281AA41B00B81AAC /* AddTaskVMTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,14 +15,19 @@ enum AppRoute: Equatable {
 }
 
 struct ContentView: View {
-    @StateObject var pilot = UIPilot(initial: AppRoute.List)
     
+    private let pilot: UIPilot<AppRoute>
+    
+    init() {
+        pilot = Injector.assembler.resolver.resolve(UIPilot<AppRoute>.self)!
+    }
+        
     var body: some View {
         UIPilotHost(pilot) { route in
             switch route {
                 case .List: return AnyView(TaskListView())
                 case .View: return AnyView(EmptyView())
-                case .Add: return AnyView(EmptyView())
+                case .Add: return AnyView(AddTaskView())
             }
         }
     }

@@ -6,24 +6,28 @@
 //
 
 import XCTest
+import UIPilot
 @testable import TodoApp
 
 class TaskListVMTest: XCTestCase {
     
     var viewModel: TaskListVM!
     var taskRepository: TaskRepository!
+    var uipilot: UIPilot<AppRoute>!
 
     override func setUpWithError() throws {        
         viewModel = TaskListVM()
         taskRepository = Injector.assembler.resolver.resolve(TaskRepository.self)!
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        uipilot = Injector.assembler.resolver.resolve(UIPilot<AppRoute>.self)!
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testLoadsTasks_OnInit() {
+    func testLoadsTasks_OnRefresh() {
+        XCTAssertEqual([], viewModel.tasks)
+        viewModel.refreshTasks()
         XCTAssertEqual(taskRepository.getTasks(), viewModel.tasks)
     }
     
@@ -36,4 +40,11 @@ class TaskListVMTest: XCTestCase {
         
         XCTAssertEqual(task.isCompleted, !updatedTask.isCompleted)
     }
+    
+    func testPushAddRoute_OnAddClick() {
+        XCTAssertEqual(AppRoute.List, uipilot.stack.last)
+        viewModel.onAdd()
+        XCTAssertEqual(AppRoute.Add, uipilot.stack.last)
+    }
+
 }
